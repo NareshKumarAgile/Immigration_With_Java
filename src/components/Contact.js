@@ -2,95 +2,281 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
-    const [name, setName] = useState('');
-    const [topic, setTopic] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-    };
 
     return (
-        <div className="py-[5px] bg-gray-100">
+        <div className="">
+        {/* Top Container with height 851px */}
+        <div className="h-[825px]">
+          <div className="h-[625px] bg-blue-700">
+            {/* Third Container with custom styles */}
+            <div className="relative w-[1000px] sm:h-[128px] sm:top-[92px] top-[20px] sm:left-[145px] left-0">
+              <div className="w-[1100px] h-full items-center justify-center text-white px-2 sm:px-0">
+                <h1
+                  className="text-left text-xl h-full sm:text-4xl md:text-5xl lg:text-[40px] font-semibold leading-2 font-inter"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Unlock your journey with Comprehensive Ranking System (CRS) tool
+                </h1>
+              </div>
+  
+            </div>
+            <div className="relative w-full sm:w-[830px] sm:h-[87px] sm:top-[125px] top-[20px] sm:left-[150px] left-0">
+              <p className="text-gray-100 font-inter text-[16px] pl-1">
+                Posuere sed eu proin elementum nulla. Sed non blandit auctor consequat sit orci sem. Ultrices adipiscing dictumst purus convallis. Convallis imperdiet risus turpis turpis molestie erat viverra. Amet turpis nunc facilisis turpis dui cras nunc.
+              </p>
+            </div>
+  
+            {/* New Container for Apply Now & About Us buttons */}
+            <div className="relative w-[1000px] sm:top-[150px] sm:left-[150px]">
+              <div className="space-x-4">
+                <button
+                  type="button"
+                  className="text-white bg-blue-400 hover:bg-blue-800 w-[159px] h-[61px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3"
+                >
+                  Apply Now
+                </button>
+                <button
+                  type="button"
+                  className="text-blue-700 bg-gray-50 hover:bg-gray-200 w-[159px] h-[61px] focus:ring-4 focus:outline-none focus:ring-gray-50 font-medium rounded-lg text-sm px-6 py-3"
+                >
+                  About Us
+                </button>
+              </div>
+            </div>
+  
+            {/* New Container for Expert Guidance, Tailored Solutions, Streamlined Process */}
+            <div className="relative w-[1140px] h-[276px] mx-auto sm:top-[225px]">
+              <div className="flex justify-between h-full">
+                <div className="flex-1 bg-indigo-50 text-black flex flex-col items-center justify-center">
+                  <img className="w-[40px] h-[40px]" src="/Expert-Guidance.png" alt="" />
+                  <h3 className="sm:h-[28] text-[20px] font-semibold font-inter mt-4">Expert Guidance</h3>
+                  <div className="w-[270px] h-[78px] flex items-center justify-center text-center text-[16px] font-inter mt-2">
+                    <p className="text-gray-500">
+                      Posuere sed proin elementum nulla. Sed non blandit auctor consequant sit orci sem.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-1 bg-gray-800 text-white flex flex-col items-center justify-center">
+                  <img className="w-[40px] h-[40px]" src="/send.png" alt="" />
+                  <h3 className="sm:h-[28] text-[20px] font-semibold font-inter mt-4">Tailored Solutions</h3>
+                  <div className="w-[270px] h-[78px] flex items-center justify-center text-center text-[16px] font-inter mt-2">
+                    <p className="text-gray-100">
+                      Posuere sed proin elementum nulla. Sed non blandit auctor consequant sit orci sem.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-1 bg-indigo-50 text-black flex flex-col items-center justify-center">
+                  <img className="w-[40px] h-[40px]" src="/thumbs-up.png" alt="" />
+                  <h3 className="sm:h-[28] text-[20px] font-semibold font-inter mt-4">Streamlined Process</h3>
+                  <div className="w-[270px] h-[78px] flex items-center justify-center text-center text-[16px] font-inter mt-2">
+                    <p className="text-gray-500">
+                      Posuere sed proin elementum nulla. Sed non blandit auctor consequant sit orci sem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* New Container with size of 1440x784px */}
+        <div className="w-full h-[784px] relative">
+          {/* New div with size 560px by 58px positioned from 100px to 150px */}
+            <div className="absolute w-[560px] h-[58px]" style={{ top: '100px', left: '150px' }}>
+                <p className="font-bold font-inter text-[36px] text-left">Contact</p>
+            </div>
+    
+            <div className="w-full h-[784px] bg-gray-200 flex items-center justify-center">
+  <div className="absolute w-[656px] h-[410px] sm:top-[234px] p-6 bg-white rounded-lg shadow-md">
+    <form className="space-y-4">
+      {/* First Name and Last Name in a flex container */}
+      <div className="flex space-x-4">
+        <div className="w-full">
+          <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your first name"
+          />
+        </div>
         
-        <div className="flex flex-col items-center 
-        md:py-3 md:my-24 md:mx-96 py-3 my-20 mx-10 
-        border-2 rounded-2xl shadow-2xl">
-            <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
-            <form onSubmit={handleSubmit} className="w-80">
-                <div className="mb-4">
-                    <label htmlFor="name" className="block mb-2 font-medium">
-                        Name
-                    </label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="topic" className="block mb-2 font-medium">
-                        What do you want to talk about?
-                    </label>
-                    <input
-                        type="text"
-                        id="topic"
-                        value={topic}
-                        onChange={(e) => setTopic(e.target.value)}
-                        className="w-full px-4 py-8 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="email" className="block mb-2 font-medium">
-                        Email
-                    </label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="phone" className="block mb-2 font-medium">
-                        Phone
-                    </label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <Link to="/">
-                        <button
-                            type="button"
-                            className="px-4 py-2 text-white bg-gray-500 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                        >
-                            Home
-                        </button>
-                    </Link>
-                    <button
-                        type="submit"
-                        className="px-4 py-2 text-white bg-gray-500 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                    >
-                        Submit
-                    </button>
-                </div>
-            </form>
+        <div className="w-full">
+          <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your last name"
+          />
         </div>
+      </div>
+
+      {/* Email and Phone Number in a flex container */}
+      <div className="flex space-x-4">
+        <div className="w-full">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your email"
+          />
         </div>
+
+        <div className="w-full">
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your phone number"
+          />
+        </div>
+      </div>
+
+      {/* Message field */}
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700">What would you like us to know about you?</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your message"
+        />
+      </div>
+
+      {/* Submit Button */}
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="w-full sm:w-auto mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  
+          
+        </div>
+  
+        {/* Download our app Div */}
+        <div className="relative sm:h-[700px] w-full">
+          <div className="relative w-[560px] text-left h-[77px] sm:left-[160px] sm:top-[30px]">
+            <h2 className="sm:text-[36px] font-semibold font-inter text-black">Download Our App</h2>
+          </div>
+  
+          {/* Button Row for App Store and Play Store */}
+          <div className="flex relative justify-center space-x-6 mt-8 sm:top-[50px]">
+            {/* App Store Button */}
+            <button
+              type="button"
+              className="w-[508px] h-[128px] bg-blue-400 text-white rounded-lg flex items-center justify-center"
+            >
+              <img src="/app_store_icon.png" alt="App Store" className="mr-4" />
+              <div className="flex flex-col text-center">
+                <span className="text-[24px] font-normal">Available on the</span>
+                <span className="text-[24px] font-bold">App Store</span>
+              </div>
+            </button>
+  
+            {/* Play Store Button */}
+            <button
+              type="button"
+              className="w-[508px] h-[128px] bg-blue-400 text-white rounded-lg flex items-center justify-center"
+            >
+              <img src="/play_store_icon.png" alt="Play Store" className="mr-16" />
+              <div className="flex flex-col text-center">
+                <span className="text-[24px] font-normal">Get it on</span>
+                <span className="text-[24px] font-bold">Play Store</span>
+              </div>
+            </button>
+          </div>
+  
+          {/* "What our client says" Heading */}
+          <div className="relative w-[560px] text-left h-[77px] sm:left-[160px] sm:top-[120px]">
+            <h2 className="sm:text-[36px] font-semibold font-inter text-black">What our client says</h2>
+          </div>
+  
+          {/* New Div with dimensions 1140x102 */}
+          <div className="relative w-[1140px] h-[102px] mx-auto sm:top-[200px]">
+            {/* Flex container for three equal divs */}
+            <div className="flex justify-between w-full h-full">
+              {/* Individual divs with size 364x102 */}
+              {/* Priya */}
+              <div className="w-[364px] h-[102px] flex justify-end">
+                <div className="w-[75px] h-[102px] flex items-start mt-2">
+                  {/* Circle of blue color */}
+                  <div className="w-[60px] h-[60px] bg-blue-700 rounded-full flex ">
+                    {/* You can add any content inside the circle */}
+                  </div>
+                </div>
+                <div className="w-[289px] h-[102px] flex flex-col items-start justify-start">
+                  <div className="w-[136px] h-[24px] flex">
+                    <span className="text-yellow-500 text-[24px]">★★★★★</span> {/* Simple 5-star text as placeholder */}
+                  </div>
+                  <div className="w-[289px] mt-2 ml-1 text-gray-700 text-xs font-inter">
+                    Posuere sed proin elementum nulla. Sed non blandit auctor consequat sit orci sem.
+                  </div>
+                  <div className="w-[289px] mt-1 text-gray-700 text-lg ml-1">
+                    Priya
+                  </div>
+                </div>
+              </div>
+              {/* James */}
+              <div className="w-[364px] h-[102px] flex justify-end">
+                <div className="w-[75px] h-[102px] flex items-start mt-2">
+                  {/* Circle of blue color */}
+                  <div className="w-[60px] h-[60px] bg-blue-700 rounded-full flex ">
+                    {/* You can add any content inside the circle */}
+                  </div>
+                </div>
+                <div className="w-[289px] h-[102px] flex flex-col items-start justify-start">
+                  <div className="w-[136px] h-[24px] flex">
+                    <span className="text-yellow-500 text-[24px]">★★★★★</span> {/* Simple 5-star text as placeholder */}
+                  </div>
+                  <div className="w-[289px] mt-2 ml-1 text-gray-700 text-xs font-inter">
+                    Posuere sed proin elementum nulla. Sed non blandit auctor consequat sit orci sem.
+                  </div>
+                  <div className="w-[289px] mt-1 text-gray-700 text-lg ml-1">
+                    James
+                  </div>
+                </div>
+              </div>
+              {/* Lara */}
+              <div className="w-[364px] h-[102px] flex justify-end">
+                <div className="w-[75px] h-[102px] flex items-start mt-2">
+                  {/* Circle of blue color */}
+                  <div className="w-[60px] h-[60px] bg-blue-700 rounded-full flex ">
+                    {/* You can add any content inside the circle */}
+                  </div>
+                </div>
+                <div className="w-[289px] h-[102px] flex flex-col items-start justify-start">
+                  <div className="w-[136px] h-[24px] flex">
+                    <span className="text-yellow-500 text-[24px]">★★★★★</span> {/* Simple 5-star text as placeholder */}
+                  </div>
+                  <div className="w-[289px] mt-2 ml-1 text-gray-700 text-xs font-inter">
+                    Posuere sed proin elementum nulla. Sed non blandit auctor consequat sit orci sem.
+                  </div>
+                  <div className="w-[289px] mt-1 text-gray-700 text-lg ml-1">
+                    Lara
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
     );
 };
 

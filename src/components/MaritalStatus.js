@@ -67,13 +67,53 @@ const MaritalStatus = ({selectedMaritalStatus}) => {
 
   return (
     <div>
-      <div className="md:w-72 w-48">
+        {/* <h2 className="p-2 mt-3 font-semibold md:w-96">
+          Marital Status?
+        </h2> */}
+      <div className="relative w-[475px] h-[48px] font-inter mt-5">
         <Select
           options={options}
           onChange={handleDropdownChange}
           value={selectedOption}
           placeholder="Select an option"
           isClearable
+          styles={{
+            container: (provided) => ({
+              ...provided,
+              width: '100%', // Ensure it takes the full width available
+            }),
+            control: (provided) => ({
+              ...provided,
+              height: '48px', // Set height for the select control (the box the user interacts with)
+              minHeight: '48px', // Minimum height for the select control
+            }),
+            menu: (provided) => ({
+              ...provided,
+              maxHeight: '300px', // Set max height for the dropdown body (list of options)
+              overflowY: 'auto',  // Enable scrolling if there are too many options
+            }),
+            dropdownIndicator: (provided) => ({
+              ...provided,
+              padding: '4px', // Adjust padding for the dropdown indicator (arrow)
+            }),
+            indicatorSeparator: (provided) => ({
+              ...provided,
+              display: 'block', // Display the separator as a line
+              
+            }),
+            placeholder: (provided) => ({
+              ...provided,
+              fontSize: '20px', // Set placeholder text size to 40px
+            }),
+            singleValue: (provided) => ({
+              ...provided,
+              fontSize: '20px', // Set selected option text size to 40px
+            }),
+            option: (provided) => ({
+              ...provided,
+              fontSize: '20px', // Set the dropdown options text size to 40px
+            }),
+          }}
         />
       </div>
       <div>
