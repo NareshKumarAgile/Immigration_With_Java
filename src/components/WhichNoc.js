@@ -41,7 +41,7 @@ const WhichNoc = (props) => {
             </div>
             
             {/* Render NominationCertificateFrom if a valid option is selected */}
-            {selectedOption.value !== "select" && (
+            {selectedOption.value !== "SELECT" && (
                 <whichNocData.Provider value={selectWhichNocData}>
                     <NominationCertificateFrom 
                         yourSpouseComeWithYouToCanada={props.yourSpouseComeWithYouToCanada} 

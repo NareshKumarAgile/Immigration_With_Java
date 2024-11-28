@@ -325,54 +325,56 @@ const DidYourSpouseTakeLanguageTest = () => {
     };
 
     return (
-        <SpouseLanguageTestContext.Provider value={languageTestData}>
-            <div>
-                <h2 className="p-2 mt-3 font-semibold md:w-96">Which language test did you take for your first official language?</h2>
-                <div className="md:w-72 w-48">
-                    <Select
-                        options={options}
-                        onChange={handleDropdownChange}
-                        value={selectedOption}
-                        placeholder="Select..."
-                        isClearable
-                    />
-                </div>
-                {selectedOption.value !== "NOT_SELECT" && selectedOption.value !== "NOT_APPLICABLE" && (
-                    <div className="md:w-72 w-48">
-                        <h4>Speaking:</h4>
-                        <Select
-                            options={speakingItems}
-                            onChange={selected => handleScoreChange('speaking', selected)}
-                            placeholder="Select Speaking Level"
-                            isClearable
-                        />
-                        <h4>Listening:</h4>
-                        <Select
-                            options={listeningItems}
-                            onChange={selected => handleScoreChange('listening', selected)}
-                            placeholder="Select Listening Level"
-                            isClearable
-                        />
-                        <h4>Reading:</h4>
-                        <Select
-                            options={readingItems}
-                            onChange={selected => handleScoreChange('reading', selected)}
-                            placeholder="Select Reading Level"
-                            isClearable
-                        />
-                        <h4>Writing:</h4>
-                        <Select
-                            options={writingItems}
-                            onChange={selected => handleScoreChange('writing', selected)}
-                            placeholder="Select Writing Level"
-                            isClearable
-                        />
-                    </div>
-                )}
-                <CommonData />
-            </div>
-        </SpouseLanguageTestContext.Provider>
-    );
+      <SpouseLanguageTestContext.Provider value={languageTestData}>
+      <div>
+          <h2 className="p-2 mt-3 font-semibold md:w-96">Which language test did you take for your first official language?</h2>
+          <div className="md:w-72 w-48">
+              <Select
+                  options={options}
+                  onChange={handleDropdownChange}
+                  value={selectedOption}
+                  placeholder="Select..."
+                  isClearable
+              />
+          </div>
+          
+          {/* Show language options only if selectedOption is not NOT_SELECTED or NOT_APPLICABLE */}
+          {selectedOption.value !== "NOT_SELECTED" && selectedOption.value !== "NOT_APPLICABLE" && (
+              <div className="md:w-72 w-48">
+                  <h4>Speaking:</h4>
+                  <Select
+                      options={speakingItems}
+                      onChange={selected => handleScoreChange('speaking', selected)}
+                      placeholder="Select Speaking Level"
+                      isClearable
+                  />
+                  <h4>Listening:</h4>
+                  <Select
+                      options={listeningItems}
+                      onChange={selected => handleScoreChange('listening', selected)}
+                      placeholder="Select Listening Level"
+                      isClearable
+                  />
+                  <h4>Reading:</h4>
+                  <Select
+                      options={readingItems}
+                      onChange={selected => handleScoreChange('reading', selected)}
+                      placeholder="Select Reading Level"
+                      isClearable
+                  />
+                  <h4>Writing:</h4>
+                  <Select
+                      options={writingItems}
+                      onChange={selected => handleScoreChange('writing', selected)}
+                      placeholder="Select Writing Level"
+                      isClearable
+                  />
+              </div>
+          )}
+          <CommonData />
+      </div>
+  </SpouseLanguageTestContext.Provider>
+);
 };
 
 export default DidYourSpouseTakeLanguageTest;

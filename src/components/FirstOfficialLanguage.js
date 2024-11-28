@@ -253,6 +253,9 @@ const FirstOfficialLanguage = (props) => {
     return languageTestValues[selectedOption.value]?.[testType] || [];
   };
 
+  // Function to check if all four scores have been selected
+  const allScoresSelected = speakingScore && listeningScore && readingScore && writingScore;
+
   return (
     <LanguageTestContext.Provider value={{ selectedOption, speakingScore, listeningScore, readingScore, writingScore }}>
       <div>
@@ -279,7 +282,9 @@ const FirstOfficialLanguage = (props) => {
             </>
           )}
         </div>
-        {showAdditionalOptions && (
+
+        {/* Render additional results only if all scores are selected */}
+        {showAdditionalOptions && allScoresSelected && (
           <>
             {["CELPIP_G", "IELTS", "PTE_CORE"].includes(selectedOption.value) ? (
               <OtherLanguageResultFirst yourSpouseComeWithYouToCanada={props.yourSpouseComeWithYouToCanada} />
@@ -288,7 +293,6 @@ const FirstOfficialLanguage = (props) => {
             ) : null}
           </>
         )}
-
       </div>
     </LanguageTestContext.Provider>
   );

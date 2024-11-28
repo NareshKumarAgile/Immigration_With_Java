@@ -42,7 +42,7 @@ const NominationCertificateFrom = (props) => {
       </div>
 
       {/* Conditionally render the next component based on selection */}
-      {selectedOption.value !== "select" && (
+      {selectedOption.value !== "SELECT" && (
         <nominationCertificateFromData.Provider value={selectNominationCertificateFromData}>
           <YourSpouseOrCommonLawPartner 
             yourSpouseComeWithYouToCanada={props.yourSpouseComeWithYouToCanada} 

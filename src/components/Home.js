@@ -79,9 +79,9 @@ const Home = () => {
       </div>
 
       {/* Feature Section */}
-      <div className="relative w-full h-[884px] sm:top-[]">
+      <div className="relative w-full h-[684px] sm:top-[]">
         {/* Feature Title and Button */}
-        <div className="absolute top-[100px] left-[150px] flex justify-between items-center w-[calc(100%-300px)]">
+        <div className="absolute sm:top-[50px] left-[150px] flex justify-between items-center w-[calc(100%-300px)]">
           <h2 className="sm:text-[36px] font-semibold font-inter text-black">Features</h2>
           <button
             type="button"
@@ -92,7 +92,7 @@ const Home = () => {
         </div>
 
         {/* Blocks Section */}
-        <div className="relative flex justify-start top-[245px] px-[150px] space-x-[20px]">
+        <div className="relative flex justify-start top-[150px] px-[150px] space-x-[20px]">
           {/* Block 1 */}
           <div className="w-[357px] h-[361px] bg-indigo-50 shadow-md rounded-lg p-3">
             <img className="w-[319px] h-[198px] rounded-lg" src="/images (2).jpg" alt="" />
@@ -119,7 +119,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative text-center sm:top-[375px]">
+        <div className="relative text-center sm:top-[250px]">
           <h2 className="sm:text-[28px] font-semibold font-inter text-blue-600">Comprehensive Ranking System (CRS) tool: skilled immigrants (Express Entry)</h2>
         </div>
       </div>
@@ -127,7 +127,7 @@ const Home = () => {
       {/* New Full-Width Div with Height 941px */}
       <div className="w-full">
         {/* New div with 875px x 148px */}
-          <h1 className="relative sm:text-[30px] font-semibold font-inter left-[280px] text-gray-800 mt-5">Marital Status?</h1>
+          <h1 className="relative sm:text-[30px] font-semibold font-inter left-[280px] text-gray-800">Marital Status?</h1>
         <div className=" w-[475px] mx-auto ">
           <MaritalStatus/>
         </div>
@@ -241,27 +241,27 @@ const Home = () => {
       </div>
 
       {/* New Full-Width Div with Height 1440x596px */}
-      <div className="relative w-full h-[596px] mx-auto bg-blue-700">
+      <div className="relative w-full h-[496px] mx-auto bg-blue-700">
         {/* New div with the specified dimensions */}
-        <div className="relative w-[290px] h-[11px] mx-auto sm:top-[120px]">
+        <div className="relative w-[290px] h-[11px] mx-auto sm:top-[50px]">
           <span className="text-center text-[15px] font-intertight text-yellow-300">
             UNLOCK YOUR IMMIGRATION POTENTIAL
           </span>
         </div>
         {/* New div with dimensions 830px x 156px */}
-        <div className="relative w-[830px] h-[156px] mx-auto sm:top-[151px] flex items-center justify-center">
+        <div className="relative w-[830px] h-[156px] mx-auto sm:top-[60px] flex items-center justify-center">
           <span className="text-center text-[32px] font-semibold font-intertight text-gray-50">
             Take the First Step Towards Your Immigration Goals
           </span>
         </div>
         {/* New div with dimensions 830px x 58px */}
-        <div className="relative w-[830px] h-[156px] mx-auto sm:top-[100px] flex items-center justify-center">
+        <div className="relative w-[830px] h-[156px] mx-auto sm:top-[0px] flex items-center justify-center">
           <span className="text-center text-[18px] font-inter font-light text-gray-100">
             Posuere sed eu proin elementum nulla. Sed non blandit auctor consequat sit orci sem. Ultrices adipiscing dictumst purus convallis convallis imperdiet
           </span>
         </div>
         {/* Button Get Started Now with dimensions 201px x 61px */}
-        <div className="relative w-[201px] h-[61px] mx-auto sm:top-[120px] mt-6">
+        <div className="relative w-[201px] h-[61px] mx-auto sm:top-[10px] mt-6">
           <button
             type="button"
             className="w-full h-full bg-blue-600 text-white text-inter rounded-lg text-center text-[15px] font-semibold hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
